@@ -1,11 +1,10 @@
-import React from 'react'
-import adultBeginners from'./assets/adultBeginners.jpg'
-import {Card, CardGroup} from "react-bootstrap";
+import React from 'react';
 
-export const Home = () => (
-    <div>
-        <h1>Welcome To Los Angeles Jiu-Jitsu</h1>
+import { Card, CardGroup } from "react-bootstrap";
 
+export const classDetails  = () => {
+
+    return (
         <CardGroup>
             <Card>
                 <Card.Img variant="top" src="holder.js/100px160" />
@@ -21,15 +20,16 @@ export const Home = () => (
                 </Card.Footer>
             </Card>
             <Card>
-                <Card.Img variant="top" src={ adultBeginners } />
+                <Card.Img variant="top" src="holder.js/100px160" />
                 <Card.Body>
-                    <Card.Title>Adult Beginners</Card.Title>
+                    <Card.Title>Card title</Card.Title>
                     <Card.Text>
-                        Adult Beginners
+                        This card has supporting text below as a natural lead-in to additional
+                        content.{' '}
                     </Card.Text>
                 </Card.Body>
                 <Card.Footer>
-                    <small className="text-muted">Try A Class!</small>
+                    <small className="text-muted">Last updated 3 mins ago</small>
                 </Card.Footer>
             </Card>
             <Card>
@@ -47,5 +47,6 @@ export const Home = () => (
                 </Card.Footer>
             </Card>
         </CardGroup>
-    </div>
-)
+    )
+
+}
