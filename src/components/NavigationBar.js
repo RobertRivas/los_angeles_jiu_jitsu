@@ -2,6 +2,7 @@ import React from 'react';
 import { Nav, Navbar} from "react-bootstrap";
 import { Link } from 'react-router-dom';
 import styled from "styled-components";
+import logo from '../assets/lajjlogo.png'
 
 
 
@@ -20,7 +21,8 @@ const Styles = styled.div`
 export const NavigationBar = () => (
     <Styles>
         <Navbar expand="lg">
-            <Navbar.Brand href="/">Los Angeles Jiu-Jitsu</Navbar.Brand>
+            <Navbar.Brand href="/"></Navbar.Brand>
+            <img src={logo} style={{width:100, marginTop: -7}} />
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">

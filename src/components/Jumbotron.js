@@ -8,7 +8,7 @@ import classImage from '../assets/classImage.jpg';
 const Styles = styled.div`
 .jumbo {
     background: url(${classImage}) no-repeat fixed bottom;
-    background-size: cover;
+    background-size: auto;
     color: #efefef;
     height: 600px;
     position: relative;

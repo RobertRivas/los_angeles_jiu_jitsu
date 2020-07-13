@@ -1,51 +1,58 @@
 import React from 'react'
-import adultBeginners from'./assets/adultBeginners.jpg'
+import openMat from './assets/openMat.jpg'
+import adultBeginners from './assets/adultBeginners.jpg'
+import logo from './assets/lajjlogo.png'
 import {Card, CardGroup} from "react-bootstrap";
+import MapSection from "./components/map/Map";
+
+const location = {
+    address: '4743 East Cesar E Chavez Avenue, Los Angeles, CA 90022',
+    lat: 34.040915,
+    lng: -118.163354,
+}
 
 export const Home = () => (
     <div>
         <h1>Welcome To Los Angeles Jiu-Jitsu</h1>
-
+        {/*Need to component out these cards*/}
         <CardGroup>
             <Card>
-                <Card.Img variant="top" src="holder.js/100px160" />
+                <Card.Img variant="top" src={ logo } />
                 <Card.Body>
-                    <Card.Title>Card title</Card.Title>
+                    <Card.Title>Kids Jiu-Jitsu</Card.Title>
                     <Card.Text>
-                        This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.
+                        Saturday 9:00AM-9:45AM
                     </Card.Text>
                 </Card.Body>
                 <Card.Footer>
-                    <small className="text-muted">Last updated 3 mins ago</small>
+                    <small className="text-muted">Come by and Try A Class!</small>
                 </Card.Footer>
             </Card>
             <Card>
                 <Card.Img variant="top" src={ adultBeginners } />
                 <Card.Body>
-                    <Card.Title>Adult Beginners</Card.Title>
+                    <Card.Title>Adult Beginners Jiu-Jitsu</Card.Title>
                     <Card.Text>
-                        Adult Beginners
+                        Adult Beginners 10:00AM-11:00AM
                     </Card.Text>
                 </Card.Body>
                 <Card.Footer>
-                    <small className="text-muted">Try A Class!</small>
+                    <small className="text-muted">Come by and Try A Class!</small>
                 </Card.Footer>
             </Card>
             <Card>
-                <Card.Img variant="top" src="holder.js/100px160" />
+                <Card.Img variant="top" src={ openMat }  />
                 <Card.Body>
-                    <Card.Title>Card title</Card.Title>
+                    <Card.Title>Open Mat/Sparring</Card.Title>
                     <Card.Text>
-                        This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This card has even longer content than the first to
-                        show that equal height action.
+                        Open Mat 11:00AM-12:30PM
                     </Card.Text>
                 </Card.Body>
                 <Card.Footer>
-                    <small className="text-muted">Last updated 3 mins ago</small>
+                    <small className="text-muted">Come by and Try A Class!</small>
                 </Card.Footer>
             </Card>
         </CardGroup>
+        <MapSection location={location} zoomLevel={17} />
     </div>
 )
