@@ -3,10 +3,7 @@ import GoogleMapReact from 'google-map-react'
 import { Icon } from '@iconify/react'
 import locationIcon from '@iconify/icons-mdi/map-marker'
 import './map.css'
-// require('dotenv').config()
 
-
-// const key = require('GOOGLE_MAP_API_KEY')
 
 
 const LocationPin = ({ text }) => (
@@ -22,7 +19,7 @@ const Map = ({ location, zoomLevel }) => (
 
         <div className="google-map">
             <GoogleMapReact
-                bootstrapURLKeys={{ key: '' }}
+                bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAP_API_KEY  }}
                 defaultCenter={location}
                 defaultZoom={zoomLevel}
             >

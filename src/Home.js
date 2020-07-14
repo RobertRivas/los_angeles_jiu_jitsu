@@ -53,6 +53,6 @@ export const Home = () => (
                 </Card.Footer>
             </Card>
         </CardGroup>
-        <MapSection location={location} zoomLevel={17} />
+        <MapSection location={location} zoomLevel={19} />
     </div>
 )
